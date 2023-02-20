@@ -1,3 +1,5 @@
+please see the results(screenshots) in results folder.
+
 # Assignment1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
