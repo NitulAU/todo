@@ -1,0 +1,37 @@
+<div class="create-section">
+    <div class="row">
+        <div class="col-lg-10 form-group my-2">
+            <!-- <label for="name">ToDo</label> -->
+            <input class="form-control task-input"
+                    type="text"
+                    id="todo"
+                    (input)="onUpdateTodo($event)"
+                    #todoInput>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3 mb-lg-0">
+            <div class="d-inline col-bar">
+                <span class="col-theme">color theme :</span> 
+                <div class="d-inline-flex">
+                    <button class="colorChoice" 
+                            *ngFor="let p of palette"
+                            (click)="onChoice(p)" 
+                            [ngStyle]="{'background-color':p}"></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">      
+            <app-category (catEmiter)="onCatReceive($event)"></app-category>    
+        </div>
+    </div>
+    <!-- <app-date></app-date> -->
+    <div class="row">
+        <div class="col-md-5 col-sm-8 d-flex align-items-center justify-content-center">
+            <button class="btn btn-primary create-btn mt-3" 
+                    (click)="onCreate()"
+                    [disabled]='createBtn'>Create Task</button>
+        </div>
+    </div>    
+</div>
+

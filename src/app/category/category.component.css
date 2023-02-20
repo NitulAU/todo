@@ -1,0 +1,19 @@
+.cat-bar{
+    position: relative;
+    width: fit-content;
+}
+.cat-bar::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+    /* z-index: -1; */
+}
+.category-selection:hover .cat-bar::after{
+    width: 90%;
+    transition: all 0.4s 0.1s;
+}

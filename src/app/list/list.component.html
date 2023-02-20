@@ -1,0 +1,20 @@
+<div class="container mt-3 mt-md-0 list-section" role="button">
+    <h4 class="list-heading">Here is your To-Do List</h4>
+    <ol class="list-group-numbered list-group list-group-flush">
+        <li class="list-group-item d-flex li-item"
+            *ngFor="let t of tasks"
+            [ngStyle]="{'background-color':t.color}"
+            (click)="onSelectTask(t)">
+            <input  type="checkbox" 
+                    class="mx-3 done-check"
+                    (change)="onDone($event,t)">
+            <div class="ms-2 me-auto">
+              {{t.name}} 
+              <div class="fw-bold">{{t.category}}</div> 
+            </div>
+            <!-- <span class="badge bg-primary rounded-pill">14</span>  -->
+            <button class="deleteBtn btn btn-danger mx-3"
+                    (click)="onDelete(t)"></button>
+        </li>
+    </ol>
+</div>

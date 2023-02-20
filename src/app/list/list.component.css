@@ -1,0 +1,49 @@
+.list-section{
+    height: 100%;
+    /* border-left: 2px solid #ccc; */
+    color: brown;
+}
+.list-heading{
+    position: relative;
+    width: fit-content;
+}
+.list-heading::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+    /* z-index: -1; */
+}
+.list-section:hover .list-heading::after{
+    width: 100%;
+    transition: all 0.6s 0.1s;
+}
+.li-item{
+    opacity: 0.99;
+    border-radius: 10px;
+    /* color: brown; */
+}
+.li-item:hover{
+    opacity: 1;
+    transform: scale(1.005);
+    transition: all 0.2s;
+    /* animation-timing-function: backwards; */
+    animation-fill-mode: backwards;
+}
+.done-check{
+    width: 25px;
+    height: 25px;
+}
+.deleteBtn{
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    background: none;
+    background-image: url('../../assets/img/delete.png');
+    background-size: cover;
+}

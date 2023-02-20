@@ -1,0 +1,48 @@
+<div class="loginpage">
+    <div class="loginpage-box">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <div class="img-box d-flex p-3">
+                    <img class="img-fluid tm-logo" src="../../assets/img/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <form class="f">
+                    <div class="mb-3">
+                        <label for="uname" class="form-label fw-semibold lab">User Name or Phone Number</label>
+                        <input type="text" 
+                                class="form-control inp-name" 
+                                name="nameInput"
+                                id="uname" 
+                                [(ngModel)]="username"
+                                (input)="textInputCheck($event)" 
+                                aria-describedby="usernameHelp">
+                                <!-- [value]="username"(keyup.Enter)="username=$event.target.value"{{username}} -->
+                        <div id="usernameHelp" class="form-text">We'll never share your details with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label  for="pd" class="form-label fw-semibold lab">Password</label>
+                        <input  type="password" 
+                                class="form-control inp-pass" 
+                                id="pd"
+                                [(ngModel)]="pass"
+                                (input)="textInputCheck($event)" 
+                                name="passwordInput">
+                        <div    id="loginHelp" 
+                                class="form-text"
+                                *ngIf="lgStatus==false">{{passwordMsg}}</div>
+                    </div>
+                    <button type="submit" 
+                            class="btn btn-primary fw-semibold"
+                            (click)="onLogin()">Login</button>
+                    <!-- <span class="">OR</span> -->
+                        <button type="submit" 
+                                class="btn btn-outline-danger mt-4 fw-semibold lg-google"
+                                    (click)="onLogin()">
+                                    <img src="../../assets/img/google.jpg" alt="" class="img-btn">
+                                    Login with Google</button>
+                </form>           
+            </div>
+        </div>
+    </div>
+</div>

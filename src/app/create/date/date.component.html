@@ -1,0 +1,14 @@
+<p>complete by:</p>
+<div class="row">
+    <div class="col-md-12 me-2">
+        <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+    </div>
+    <div class="col-md-12">
+        <button class="btn btn-sm btn-outline-primary me-2" (click)="selectToday()">Select Today</button>
+        <button class="btn btn-sm btn-outline-primary me-2" (click)="dp.navigateTo()">To current month</button>
+        <button class="btn btn-sm btn-outline-primary me-2" (click)="dp.navigateTo({year: 2023, month: 3})">To March 2023</button>
+    </div>
+</div>
+<hr />
+<pre>Month: {{ date.month }}.{{ date.year }}</pre>
+<pre>Model: {{ model | json }}</pre>

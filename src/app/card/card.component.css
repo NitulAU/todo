@@ -1,0 +1,22 @@
+.card-section{
+    background-image:linear-gradient(135deg,#5ca3da89,#5ca3da59);
+    border:0.25px solid #ffffffc6;
+    border-radius: 10px;
+    width: fit-content;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #022641;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+.card-section:hover{
+    border:2px dotted #fff;
+    background-image:linear-gradient(225deg,#5ca3da89,#5ca3da59);
+    /* background-image:linear-gradient(135deg,#5ca3da59,#5ca3da89); */
+    transition: all 0.6s 1s;
+}
+.remark-input{
+    border-radius: 5px;
+    border: transparent;
+    padding: 2px 8px;
+    background-color: #ffffffd5;
+}

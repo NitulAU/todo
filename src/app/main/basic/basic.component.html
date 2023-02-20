@@ -1,0 +1,15 @@
+<div class="row my-5 mx-auto  basic">
+    <div class="col-md-6">
+      <div class="container-fluid"><app-create></app-create></div>
+      <hr *ngIf='hr'>
+      <div class="d-flex justify-content-center" *ngIf='viewCard'>
+        <app-card (cardClose)="onCardEmit($event)"></app-card>
+      </div>
+    </div>
+    <div class="col-md-6 mt-md-0  mt-sm-5">
+      <div class="container-fluid"><app-list></app-list></div>
+    </div>
+  </div>
+    <!-- <video autoplay muted loop id="myVideo" class="bg-basic">
+      <source src="../../../assets/img/ocean.mp4" type="video/mp4">
+    </video> -->

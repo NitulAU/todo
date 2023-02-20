@@ -1,0 +1,33 @@
+.basic{
+    height: 100%;
+    margin: 50px auto;
+    width: 90%;
+    /* background-image: url("../../../assets/img/logo.png"); */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+    /* position: relative; */
+    /* border: 1px solid blue; */
+    border-radius: 10px;
+    padding: 15px 10px;
+    box-shadow: 1px 5px 10px #fff;
+    /* background-image: linear-gradient(180deg, #5ca4da, #fff); */
+}
+.basic:hover{
+    box-shadow: 1px 5px 8px #fff;
+
+}
+/* @media screen () {
+    
+} */
+.bg-basic{
+    position: fixed;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}

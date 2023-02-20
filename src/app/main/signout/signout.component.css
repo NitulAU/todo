@@ -1,0 +1,7 @@
+.signout-box{
+    width: 200px;
+    height: 100px;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+}
